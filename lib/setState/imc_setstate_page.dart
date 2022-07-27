@@ -29,6 +29,7 @@ class _ImcSetstatePageState extends State<ImcSetstatePage> {
 
     setState(() {
       imc = peso / pow(altura, 2);
+      print(imc);
     });
   }
 
@@ -92,6 +93,15 @@ class _ImcSetstatePageState extends State<ImcSetstatePage> {
               SizedBox(
                 height: 20,
               ),
+              Text(
+                imc.toString(),
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               ElevatedButton(
                 onPressed: () {
                   var formValid = formKey.currentState?.validate() ?? false;
@@ -103,8 +113,6 @@ class _ImcSetstatePageState extends State<ImcSetstatePage> {
                     double peso = formatter.parse(pesoEC.text) as double;
                     double altura = formatter.parse(alturaEC.text) as double;
 
-                    print(peso);
-                    print(altura);
                     _calcularIMC(peso: peso, altura: altura);
                   }
                 },
