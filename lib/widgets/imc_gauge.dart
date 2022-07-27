@@ -18,7 +18,7 @@ class ImcGauge extends StatelessWidget {
           maximum: 47.9,
           ranges: [
             ImcGaugeRange(
-                color: Colors.blue, start: 12.5, end: 18.5, label: 'MAGREZA'),
+                color: Colors.purple, start: 12.5, end: 18.5, label: 'MAGREZA'),
             ImcGaugeRange(
                 color: Colors.green, start: 18.5, end: 24.5, label: 'NORMAL'),
             ImcGaugeRange(
