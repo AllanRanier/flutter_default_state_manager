@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_default_state_manager/Charge_notifier/imc_charge_notifier_page.dart';
+
 import 'package:flutter_default_state_manager/setState/imc_setstate_page.dart';
 import 'package:flutter_default_state_manager/value_notifier/value_notifier_page.dart';
 
@@ -30,7 +32,7 @@ class HomePage extends StatelessWidget {
               child: Text('valueNotifier'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => _goToPage(context, ImcChargeNotifierPage()),
               child: Text('ChargeNotiFier'),
             ),
             ElevatedButton(
